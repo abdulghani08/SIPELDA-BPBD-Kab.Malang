@@ -1,3 +1,18 @@
+<?php
+session_start();
+include "connection.php";
+error_reporting(E_ALL^(E_NOTICE|E_WARNING));
+if(empty($_SESSION['username'])){ 
+    die("Anda belum login"); 
+}
+
+$koneksi = mysqli_connect($host, $username, $password, $database);
+$user = $_SESSION['username'];
+$sql="SELECT * from register where username='$user'";
+$query = mysqli_query($koneksi, $sql);
+$data = mysqli_fetch_array($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,13 +52,27 @@
         <hr>
 
         <div class="menu">
-            <ul>
+            <ul <?php if ($data['level']=='Admin'): ?>>
                 <li><a href="/home/">Halaman Utama</a></li> 
                 <li><a href="/home/">Laporan</a></li>
                 <li><a href="/home/">Bencana</a></li> 
                 <li><a href="/home/">Kelola Pegawai</a></li>    
                 <li><a href="/home/">Kelola akun</a></li> 
             </ul>
+            <ul <?php elseif($data['level']=='Operator'): ?>>
+                <li><a href="/home/">Halaman Utama</a></li> 
+                <li><a href="/home/">Laporan</a></li>
+                <li><a href="/home/">Bencana</a></li>     
+                <li><a href="/home/">Kelola akun</a></li> 
+            </ul>
+            <ul <?php elseif($data['level']=='Lapangan'): ?>>
+                <li><a href="/home/">Halaman Utama</a></li> 
+                <li><a href="/home/">Laporan</a></li>
+                <li><a href="/home/">Bencana</a></li> 
+                <li><a href="/home/">Kelola Pegawai</a></li>    
+                <li><a href="/home/">Kelola akun</a></li> 
+            </ul>
+            <?php endif; ?>
                 
         </div>
     </div>

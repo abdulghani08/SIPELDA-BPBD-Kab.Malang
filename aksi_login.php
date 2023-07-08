@@ -16,11 +16,11 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION['level'] = $row['level'];
 
         if($row['level'] == "Admin"){
-            header("Location: home.php?level=Admin");
-        } elseif($row['level'] == "Pembina"){
-            header("Location: home.php?level=Pembina");
-        } elseif($row['level'] == "Tamu"){
-            header("Location: hometamu.php?level=Tamu");
+            header("Location: dasboard.php?level=Admin");
+        } elseif($row['level'] == "Operator"){
+            header("Location: dasboard.php?level=Operator");
+        } elseif($row['level'] == "Lapangan"){
+            header("Location: dasboard.php?level=Lapangan");
         } else {
             die("Level tidak valid");
         }
