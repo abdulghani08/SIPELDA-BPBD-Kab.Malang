@@ -69,8 +69,6 @@ $data = mysqli_fetch_array($query);
                 <li><a href="/home/">Halaman Utama</a></li> 
                 <li><a href="/home/">Laporan</a></li>
                 <li><a href="/home/">Bencana</a></li> 
-                <li><a href="/home/">Kelola Pegawai</a></li>    
-                <li><a href="/home/">Kelola akun</a></li> 
             </ul>
             <?php endif; ?>
                 
