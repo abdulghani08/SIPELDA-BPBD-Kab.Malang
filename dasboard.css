@@ -21,7 +21,7 @@
   border: white 3px solid;
   border-radius: 5px;
   padding: 12px 20px;
-  margin-top: 10px;
+  margin-top: 300px;
 }
 
 .logout a {
@@ -34,11 +34,11 @@
   text-align: center;
   border-radius: 5px;
   padding: 12px 20px;
-  
+  margin-left: 20px;
 }
 
 .logout:hover a{
-  background-color: #555;
+  background-color:brown;
   color: white;
 }
 
