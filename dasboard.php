@@ -73,7 +73,14 @@ $data = mysqli_fetch_array($query);
             <?php endif; ?>
                 
         </div>
+        
+        <div class="logout">
+            <a href="">Bencana</a>
+        </div>
+        
+
     </div>
+
 
     <script>
         let subMenu = document.getElementById("subMenu");
