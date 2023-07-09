@@ -75,7 +75,7 @@ $data = mysqli_fetch_array($query);
         </div>
         
         <div class="logout">
-            <a href="">Logout</a>
+            <a href="logout.php">Logout</a>
         </div>
         
 
