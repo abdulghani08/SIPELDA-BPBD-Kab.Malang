@@ -12,18 +12,27 @@
     margin-left: 290px;
     margin-right: 200px;
     text-align: center;
+    
 }
 
 .card {
-  display:inline-block;
+    background-color: #ffa12c;
+    display: contents;
+}
+
+.card a{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
   width: 250px;
   height: auto;
-  align-items: center;
   background-color:floralwhite;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 10px 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
-  margin-left: 20px;
-  margin-top: 30px;
+ 
 }
 
 .card hr{
@@ -38,7 +47,7 @@
     margin: 20px;
 }
 
-.card:hover {
+.card:hover a{
     scale: 1.1;
     background-color: #ffa12c;
 }
